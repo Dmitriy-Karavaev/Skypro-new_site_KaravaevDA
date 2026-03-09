@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    //   max-width: 1440px;
+}
+
+.header {
+    background-color: #E1FF8F;
+    width: 100%;
+    padding-top: 120px;
+
+    &-text {
+        max-width: 760px;
+        margin-left: 120px;
+
+    }
+
+    &__heading1 {
+        font-size: 63px;
+        font-weight: 700;
+        font-family: montserrat;
+    }
+
+    &__par {
+        font-size: 24px;
+        font-weight: 400;
+        font-family: montserrat;
+        margin-top: 24px;
+    }
+
+    &__but {
+        width: 247px;
+        font-size: 24px;
+        height: 66px;
+        border-radius: 60px;
+        text-decoration: none;
+        background-color: black;
+        color: #ffffff;
+        margin-top: 48px;
+    }
+}
+
+
+.scrolling {
+    position: relative;
+    display: flex;
+    gap: 51px;
+    list-style-type: none;
+    width: 125%;
+    height: 90px;
+    align-items: center;
+    background-color: #BCEC30;
+    margin-top: 156px;
+}
+
+.menu {
+    background-color: black;
+    padding-top: 94px;
+
+    &-text {
+        max-width: 1021px;
+        margin-left: 120px;
+    }
+
+    &__heading1 {
+        font-size: 63px;
+        font-weight: 700;
+        font-family: montserrat;
+        color: #FFFFFF;
+    }
+
+    &__par {
+        font-size: 24px;
+        font-weight: 400;
+        font-family: montserrat;
+        margin-top: 24px;
+        color: #FFFFFF;
+    }
+
+    &-topgames {
+        display: grid;
+        gap: 32px;
+        grid-template-columns: repeat(12, 1fr);
+        margin-top: 72px;
+    }
+}
+
+.cart {
+    grid-column: span 4;
+    background-color: #ffffff;
+    border-radius: 30px;
+    height: 473px;
+
+    &:nth-child(2n) {
+        height: 512px;
+    }
+
+    &__img {
+        width: 100%;
+        border-radius: 30px;
+        height: 314px;
+    }
+
+    &__text {
+        max-width: 314px;
+        padding: 32px;
+    }
+
+    &__h6 {
+        font-size: 15px;
+        font-weight: 500;
+        font-family: montserrat;
+    }
+
+    &__par {
+        font-size: 32px;
+        font-weight: 700;
+        font-family: montserrat;
+    }
+}
+
+.star1 {
+    position: relative;
+    top: -45px;
+    left: 63px;
+}
+
+.star2 {
+    position: relative;
+    top: -92px;
+    left: 90px;
+}
+
+.star3 {
+    position: relative;
+    top: 600px;
+    left: 750px;
+}
+
+.star4 {
+    position: relative;
+    top: 375px;
+    left: 240px;
+}
+
+
+.star5 {
+    position: relative;
+    top: 455px;
+    left: 255px;
+}
