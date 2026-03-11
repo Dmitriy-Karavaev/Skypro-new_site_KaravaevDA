@@ -4,12 +4,13 @@
 }
 
 .header {
+  position: relative;
   background-color: #E1FF8F;
-  width: 100%;
-  padding-top: 120px;
+  padding-top: 200px;
+  min-height: 500px;
 }
 .header-text {
-  max-width: 760px;
+  max-width: 769px;
   margin-left: 120px;
 }
 .header__heading1 {
@@ -32,6 +33,11 @@
   background-color: black;
   color: #ffffff;
   margin-top: 48px;
+  font-family: Montserrat;
+  font-weight: 600;
+  font-style: SemiBold;
+  font-size: 24px;
+  text-align: center;
 }
 .header-fill {
   width: 247px;
@@ -43,11 +49,23 @@
   display: flex;
   gap: 51px;
   list-style-type: none;
-  width: 125%;
   height: 90px;
   align-items: center;
   background-color: #BCEC30;
-  margin-top: 156px;
+  z-index: 1;
+  overflow: auto;
+}
+.scrolling__klick {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.scrolling__klick--a {
+  color: black;
+  text-decoration: none;
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 110%;
 }
 
 .menu {
@@ -96,7 +114,7 @@
   max-width: 314px;
   padding: 32px;
 }
-.cart__h6 {
+.cart__h2 {
   font-size: 15px;
   font-weight: 500;
   font-family: montserrat;
@@ -108,31 +126,31 @@
 }
 
 .star1 {
-  position: relative;
-  top: -45px;
-  left: 63px;
+  position: absolute;
+  top: 0px;
+  left: 855px;
 }
 
 .star2 {
-  position: relative;
-  top: -92px;
-  left: 90px;
+  position: absolute;
+  top: 95px;
+  left: 64px;
 }
 
 .star3 {
-  position: relative;
-  top: 600px;
-  left: 750px;
+  position: absolute;
+  top: 69px;
+  left: 156px;
 }
 
 .star4 {
-  position: relative;
-  top: 375px;
-  left: 240px;
+  position: absolute;
+  top: 548px;
+  left: 1034px;
 }
 
 .star5 {
-  position: relative;
-  top: 455px;
-  left: 255px;
+  position: absolute;
+  top: 538px;
+  left: 948px;
 }/*# sourceMappingURL=stile.css.map */
