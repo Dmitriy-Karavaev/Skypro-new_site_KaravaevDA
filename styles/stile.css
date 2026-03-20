@@ -102,22 +102,23 @@
 .menu-topgames {
   display: flex;
   gap: 32px;
-  grid-template-columns: repeat(12, 1fr);
   margin-top: 72px;
   width: 1201px;
 }
 .menu-topgames__block {
   display: flex;
   flex-direction: column;
+  gap: 32px;
 }
 
 .cart {
-  grid-column: span 4;
   background-color: #ffffff;
   border-radius: 30px;
+}
+.cart-small {
   height: 473px;
 }
-.cart:nth-child(2n) {
+.cart-big {
   height: 512px;
 }
 .cart__img {

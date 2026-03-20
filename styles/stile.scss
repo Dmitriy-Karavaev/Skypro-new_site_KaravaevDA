@@ -119,11 +119,12 @@
 
         &__block {
             display: flex;
-            flex-direction: column
+            flex-direction: column;
             gap: 32px;
         }
     }
 }
+
 
 .cart {
     background-color: #ffffff;
