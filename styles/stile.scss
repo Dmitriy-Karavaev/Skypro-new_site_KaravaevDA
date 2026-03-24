@@ -5,8 +5,8 @@
 
 
 .center {
-  padding-left: calc(50% - 1440px);
-  padding-right: calc(50% - 1440px);
+    padding-left: calc(50% - 1440px);
+    padding-right: calc(50% - 1440px);
 }
 
 .header {
@@ -60,7 +60,7 @@
 
 .scrolling {
     z-index: 1;
-    overflow-x: scroll;    
+    overflow-x: scroll;
 
     &-line {
         position: relative;
@@ -129,14 +129,14 @@
 .cart {
     background-color: #ffffff;
     border-radius: 30px;
-    
-        &-small {
-            height: 473px;
-        }
 
-        &-big {
-            height: 512px;
-        }
+    &-small {
+        height: 473px;
+    }
+
+    &-big {
+        height: 512px;
+    }
 
     &__img {
         width: 100%;
@@ -160,6 +160,31 @@
         font-weight: 700;
         font-family: montserrat;
     }
+}
+
+
+img-1 {
+    background-color: #AD61FF;
+}
+
+img-2 {
+    background-color: #FDAD00;
+}
+
+img-3 {
+    background-color: #565EEF;
+}
+
+img-4 {
+    background-color: #271A58;
+}
+
+img-5 {
+    background-color: #99D100;
+}
+
+img-6 {
+    background-color: #271A58;
 }
 
 .star1 {
