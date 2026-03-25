@@ -4,8 +4,8 @@
 }
 
 .center {
-  padding-left: calc(50% - 1440px);
-  padding-right: calc(50% - 1440px);
+  padding-left: calc(50% - 720px);
+  padding-right: calc(50% - 720px);
 }
 
 .header {
@@ -81,7 +81,6 @@
 .menu {
   background-color: black;
   padding-top: 94px;
-  padding-left: 120px;
 }
 .menu-text {
   max-width: 1021px;
@@ -141,27 +140,27 @@
   font-family: montserrat;
 }
 
-img-1 {
+.img-1 {
   background-color: #AD61FF;
 }
 
-img-2 {
-  background-color: #FDAD00;
-}
-
-img-3 {
-  background-color: #565EEF;
-}
-
-img-4 {
+.img-2 {
   background-color: #271A58;
 }
 
-img-5 {
+.img-3 {
+  background-color: #FDAD00;
+}
+
+.img-4 {
   background-color: #99D100;
 }
 
-img-6 {
+.img-5 {
+  background-color: #565EEF;
+}
+
+.img-6 {
   background-color: #271A58;
 }
 
