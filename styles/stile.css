@@ -19,7 +19,10 @@
   min-height: 500px;
 }
 .header-text {
+  position: relative;
   max-width: 769px;
+  margin-left: 120px;
+  z-index: 10;
 }
 .header__heading1 {
   font-size: 63px;
@@ -121,7 +124,6 @@
   gap: 32px;
 }
 .menu-minigames__block {
-  display: flex;
   flex-direction: column;
   gap: 32px;
 }
@@ -230,7 +232,10 @@
 .star1 {
   position: absolute;
   top: 0px;
-  left: 855px;
+  right: 0;
+}
+.star1-mob {
+  display: none;
 }
 
 .star2 {
@@ -248,19 +253,19 @@
 .star4 {
   position: absolute;
   top: 548px;
-  left: 1034px;
+  right: 344px;
 }
 
 .star5 {
   position: absolute;
   top: 538px;
-  left: 948px;
+  right: 445px;
 }
 
 .mini-star {
   position: absolute;
   top: -238px;
-  left: 878px;
+  right: 878px;
   z-index: 0;
 }
 
@@ -299,4 +304,151 @@
   font-family: Montserrat;
   font-size: 24px;
   font-weight: 600;
+}
+
+.mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: #E1FF8F;
+    padding-top: 0;
+    min-height: 500px;
+    flex-direction: column;
+  }
+  .header-text {
+    max-width: 343px;
+    margin: 147px 17px 185px;
+  }
+  .header__heading1 {
+    font-size: 40px;
+    text-align: center;
+  }
+  .header__par {
+    font-size: 16px;
+    margin-top: 36px;
+    text-align: center;
+  }
+  .header__but {
+    width: 285px;
+    height: 55px;
+    font-size: 16px;
+    margin: 35px 48px;
+  }
+  .from-games {
+    display: none;
+  }
+  .star1 {
+    display: none;
+  }
+  .star1-mob {
+    display: inline;
+    position: absolute;
+    top: 0px;
+    right: 0;
+  }
+  .menu {
+    padding: 48px 16px;
+  }
+  .menu__heading1 {
+    font-size: 40px;
+  }
+  .menu__par {
+    font-size: 24px;
+    font-weight: 400;
+    font-family: montserrat;
+    margin-top: 24px;
+    color: #FFFFFF;
+  }
+  .menu-topgames {
+    position: relative;
+    display: flex;
+    gap: 32px;
+    margin-top: 72px;
+    width: 1201px;
+  }
+  .menu-topgames__block {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    z-index: 1;
+  }
+  .menu-minigames {
+    display: flex;
+    flex-direction: column;
+    width: 1201px;
+    gap: 24px;
+  }
+  .menu-minigames__block {
+    display: flex;
+    flex-direction: column;
+  }
+  .cart-mini {
+    display: none;
+  }
+  .cart-mini__but {
+    margin-top: 0;
+    margin-bottom: 32.67px;
+  }
+  .cart__text {
+    display: flex;
+    flex-direction: column;
+    padding: 29.04px;
+  }
+  .cart__par {
+    width: 285px;
+    margin-top: 16px;
+    text-align: left;
+  }
+  .cart__h2 {
+    margin-top: 0;
+  }
+  .cart__img {
+    height: 284.9259338379px;
+  }
+  .mobile {
+    display: flex;
+    flex-direction: column;
+    width: 343px;
+    align-items: center;
+  }
+  .footer-line {
+    height: 100px;
+    max-width: 375px;
+  }
+  .footer-line__p {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 40px 92px;
+  }
+  .star2 {
+    position: absolute;
+    top: 95px;
+    left: 37px;
+  }
+  .star3 {
+    position: absolute;
+    top: 69px;
+    left: 91px;
+  }
+  .star4 {
+    position: absolute;
+    top: 580px;
+    right: 34px;
+  }
+  .star5 {
+    position: absolute;
+    top: 557px;
+    right: 86px;
+  }
+  .mini-star3 {
+    display: none;
+  }
+  .mini-star4 {
+    display: none;
+  }
 }/*# sourceMappingURL=stile.css.map */

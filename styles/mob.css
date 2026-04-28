@@ -1,0 +1,13 @@
+@media (max-width: 768px) {
+  .header {
+    position: relative;
+    background-color: #E1FF8F;
+    padding-top: 200px;
+    min-height: 500px;
+  }
+  .header-text {
+    max-width: 343px;
+    margin-left: 0;
+    margin: 150px auto;
+  }
+}/*# sourceMappingURL=mob.css.map */
