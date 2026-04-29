@@ -107,6 +107,7 @@
         font-weight: 700;
         font-family: montserrat;
         color: #FFFFFF;
+        width: 320px;
     }
 
     &__par {
@@ -136,7 +137,6 @@
     &-minigames {
         display: flex;
         flex-direction: column;
-        width: 1201px;
         gap: 32px;
 
         &__block {

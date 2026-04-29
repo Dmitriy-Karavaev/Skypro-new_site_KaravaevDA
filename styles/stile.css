@@ -96,6 +96,7 @@
   font-weight: 700;
   font-family: montserrat;
   color: #FFFFFF;
+  width: 320px;
 }
 .menu__par {
   font-size: 24px;
@@ -120,7 +121,6 @@
 .menu-minigames {
   display: flex;
   flex-direction: column;
-  width: 1201px;
   gap: 32px;
 }
 .menu-minigames__block {
@@ -310,14 +310,14 @@
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 425px) {
   .header {
     position: relative;
     display: flex;
     justify-content: center;
     background-color: #E1FF8F;
     padding-top: 0;
-    min-height: 500px;
+    min-height: 425px;
     flex-direction: column;
   }
   .header-text {
@@ -348,7 +348,7 @@
   .star1-mob {
     display: inline;
     position: absolute;
-    top: 0px;
+    top: 0;
     right: 0;
   }
   .menu {
@@ -369,7 +369,7 @@
     display: flex;
     gap: 32px;
     margin-top: 72px;
-    width: 1201px;
+    width: 425px;
   }
   .menu-topgames__block {
     display: flex;
@@ -380,7 +380,6 @@
   .menu-minigames {
     display: flex;
     flex-direction: column;
-    width: 1201px;
     gap: 24px;
   }
   .menu-minigames__block {
@@ -413,12 +412,11 @@
   .mobile {
     display: flex;
     flex-direction: column;
-    width: 343px;
     align-items: center;
   }
   .footer-line {
     height: 100px;
-    max-width: 375px;
+    max-width: 425px;
   }
   .footer-line__p {
     font-size: 16px;
