@@ -7,19 +7,25 @@
         padding-top: 0;
         min-height: 425px;
         flex-direction: column;
+        align-items: center;
 
 
         &-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             max-width: 343px;
-            margin: 147px 17px 185px;
+            margin: 147px 17px 131px;
+            width: 296px;
         }
 
 
         &__heading1 {
             font-size: 40px;
             text-align: center;
-        }
-
+            width: 262px;
+            }
+        
         &__par {
             font-size: 16px;
             margin-top: 36px;
@@ -106,7 +112,9 @@
         &__text {
             display: flex;
             flex-direction: column;
-            padding: 29.04px;
+            padding: 29.04px 0;
+            width: 285px;
+    }
         }
 
         &__par {
@@ -172,5 +180,22 @@
 
     .mini-star4 {
         display: none;
+    }
+
+
+    .scrolling  {
+        &-line {
+            height: 51.33911589746958px;
+            gap: 27.4px;
+        }
+
+        &__klick--a {
+            font-size: 16px;
+        }
+
+        &__star  {
+            width: 16px;
+            height: 16px;
+        }
     }
 }

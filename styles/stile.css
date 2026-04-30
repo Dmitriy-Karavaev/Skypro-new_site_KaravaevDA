@@ -319,14 +319,20 @@
     padding-top: 0;
     min-height: 425px;
     flex-direction: column;
+    align-items: center;
   }
   .header-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     max-width: 343px;
-    margin: 147px 17px 185px;
+    margin: 147px 17px 131px;
+    width: 296px;
   }
   .header__heading1 {
     font-size: 40px;
     text-align: center;
+    width: 262px;
   }
   .header__par {
     font-size: 16px;
@@ -448,5 +454,16 @@
   }
   .mini-star4 {
     display: none;
+  }
+  .scrolling-line {
+    height: 51.3391158975px;
+    gap: 27.4px;
+  }
+  .scrolling__klick--a {
+    font-size: 16px;
+  }
+  .scrolling__star {
+    width: 16px;
+    height: 16px;
   }
 }/*# sourceMappingURL=stile.css.map */
