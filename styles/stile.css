@@ -402,7 +402,8 @@
   .cart__text {
     display: flex;
     flex-direction: column;
-    padding: 29.04px;
+    padding: 29.04px 0;
+    width: 285px;
   }
   .cart__par {
     width: 285px;
