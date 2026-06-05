@@ -5,8 +5,8 @@
 
 
 .center {
-    padding-left: calc(50% - 1440px / 2);
-    padding-right: calc(50% - 1440px / 2);
+    padding-left: calc(50% - 600 px);
+    padding-right: calc(50% - 600 px);
 }
 
 .last {
@@ -42,21 +42,25 @@
     }
 
     &__but {
-        width: 247px;
-        font-size: 24px;
-        height: 66px;
-        border-radius: 60px;
-        text-decoration: none;
-        background-color: black;
-        color: #ffffff;
-        margin-top: 48px;
-        font-family: Montserrat;
-        font-weight: 600;
-        font-style: SemiBold;
-        font-size: 24px;
-        text-align: center;
-        border: none;
+    text-decoration: none;
+    display: flex;
+    width: 247px;
+    margin-top: 48px;
+    font-size: 24px;
+    height: 66px;
+    border: none;
+    border-radius: 60px;
+    background-color: black;
+    color: #ffffff;
+    text-align: center;
+    padding: 16px 65px;
+    justify-content: center;
+    align-items: center;
 
+        &:hover {
+            background-color: #ffffff;
+            color: black;
+  }
     }
 
     &-fill {
@@ -121,7 +125,8 @@
     &-topgames {
         position: relative;
         display: flex;
-        gap: 32px;
+        flex-wrap: wrap;    
+        gap: 32px 71px;
         margin-top: 72px;
         width: 1201px;
 
@@ -183,19 +188,21 @@
     &__h2 {
         font-size: 32px;
         font-weight: 700;
-        font-family: Montserrat;
-        margin-top: 16px;
+        font-family: Montserrat;        
     }
 
     &-mini {
         display: flex;
-        max-height: 500px;
-        justify-content: space-between;
+        max-height: 500px;        
+
+        &:nth-child(2n+1) {
+            justify-content: space-between;
+        }
 
         &__text {
             width: 50%;
             margin: 48px 0 0 48px;
-            max-width: 504px;
+            max-width: 457px;
             max-height: 249px;
         }
 
@@ -299,7 +306,7 @@
 .mini-star {
     position: absolute;
     top: -238px;
-    right: 878px;
+    left: 878px;
     z-index: 0;
 }
 
@@ -319,13 +326,15 @@
 }
 
 .mini-sta3 {
-    position: absolute;
-    right: 410px;
+        position: absolute;
+    right: -2px;
+    top: -104px;
 }
 
 .mini-sta4 {
     position: absolute;
-    right: 410px;
+    right: -70px;
+    top: -64px;
 }
 
 .footer-line {

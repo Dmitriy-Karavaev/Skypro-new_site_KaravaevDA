@@ -37,19 +37,26 @@
 }
 .header__but {
   width: 247px;
+  margin-top: 48px;
   font-size: 24px;
   height: 66px;
+  border: none;
   border-radius: 60px;
-  text-decoration: none;
   background-color: black;
   color: #ffffff;
-  margin-top: 48px;
+  text-align: center;
+}
+.header__but:hover {
+  background-color: #ffffff;
+  color: black;
+}
+.header__a {
+  text-decoration: none;
   font-family: Montserrat;
   font-weight: 600;
   font-style: SemiBold;
   font-size: 24px;
-  text-align: center;
-  border: none;
+  color: none;
 }
 .header-fill {
   width: 247px;
