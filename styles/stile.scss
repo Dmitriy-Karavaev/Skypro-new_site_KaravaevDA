@@ -130,6 +130,10 @@
         margin-top: 72px;
         max-width: 1201px;
 
+        &__a {        
+        text-decoration: none;
+        color: black;
+        }
 
         &__block {
             display: flex;
@@ -138,9 +142,16 @@
             z-index: 1;
         }
     }
-
-    &-minigames__block {
-            margin-top: 32px;
+    
+    &-minigames {        
+        position: relative;
+        
+        &__block {
+        display: flex;        
+        flex-direction: column;
+        gap: 32px;
+        margin-top: 32px;
+        }
     }
 }
 
@@ -149,12 +160,12 @@
     border-radius: 30px;    
 
     &:hover {   
-        height: 512px;
+        height: 551px;
         transition: height 0.3s; 
     }
     
     &-small {
-        height: 473px;
+        height: 512px;
     }
 
     &-big {
@@ -324,16 +335,16 @@
     z-index: 0;
 }
 
-.mini-sta3 {
+.mini-star3 {
     position: absolute;
-    right: -2px;
-    top: -104px;
+    right: -3px;
+    top: 83px;
 }
 
-.mini-sta4 {
+.mini-star4 {
     position: absolute;
-    right: -70px;
-    top: -64px;
+    right: -65px;
+    top: 124px;
 }
 
 .footer-line {
