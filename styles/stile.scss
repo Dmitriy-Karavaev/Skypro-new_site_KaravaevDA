@@ -44,6 +44,8 @@
         width: 247px;
         margin-top: 48px;
         font-size: 24px;
+        font-weight: 600;
+        font-family: Montserrat;
         height: 66px;
         border: none;
         border-radius: 60px;
@@ -117,15 +119,16 @@
         font-family: montserrat;
         margin-top: 24px;
         color: #FFFFFF;
+        max-width: 788px;   
     }
 
     &-topgames {
         position: relative;
         display: flex;
         flex-wrap: wrap;
-        gap: 32px 71px;
+        gap: 32px;
         margin-top: 72px;
-        width: 1201px;
+        max-width: 1201px;
 
 
         &__block {
@@ -136,22 +139,20 @@
         }
     }
 
-    &-minigames {
-        display: flex;
-        flex-direction: column;
-        gap: 32px;
-
-        &__block {
-            flex-direction: column;
-            gap: 32px;
-        }
+    &-minigames__block {
+            margin-top: 32px;
     }
 }
 
 .cart {
     background-color: #ffffff;
-    border-radius: 30px;
+    border-radius: 30px;    
 
+    &:hover {   
+        height: 512px;
+        transition: height 0.3s; 
+    }
+    
     &-small {
         height: 473px;
     }
@@ -195,7 +196,7 @@
         &:nth-child(2n+1) {
             justify-content: space-between;
         }
-
+        
         &__text {
             width: 50%;
             margin: 48px 0 0 48px;
@@ -237,6 +238,7 @@
             height: 500px;
         }
     }
+    
 }
 
 
