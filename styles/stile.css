@@ -4,8 +4,8 @@
 }
 
 .center {
-  padding-left: calc(50% - 720px);
-  padding-right: calc(50% - 720px);
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
 }
 
 .last {
@@ -36,6 +36,8 @@
   margin-top: 24px;
 }
 .header__but {
+  text-decoration: none;
+  display: flex;
   width: 247px;
   margin-top: 48px;
   font-size: 24px;
@@ -45,18 +47,13 @@
   background-color: black;
   color: #ffffff;
   text-align: center;
+  padding: 16px 65px;
+  justify-content: center;
+  align-items: center;
 }
 .header__but:hover {
   background-color: #ffffff;
   color: black;
-}
-.header__a {
-  text-decoration: none;
-  font-family: Montserrat;
-  font-weight: 600;
-  font-style: SemiBold;
-  font-size: 24px;
-  color: none;
 }
 .header-fill {
   width: 247px;
@@ -115,7 +112,8 @@
 .menu-topgames {
   position: relative;
   display: flex;
-  gap: 32px;
+  flex-wrap: wrap;
+  gap: 32px 71px;
   margin-top: 72px;
   width: 1201px;
 }
@@ -168,17 +166,18 @@
   font-size: 32px;
   font-weight: 700;
   font-family: Montserrat;
-  margin-top: 16px;
 }
 .cart-mini {
   display: flex;
   max-height: 500px;
+}
+.cart-mini:nth-child(2n+1) {
   justify-content: space-between;
 }
 .cart-mini__text {
   width: 50%;
   margin: 48px 0 0 48px;
-  max-width: 504px;
+  max-width: 457px;
   max-height: 249px;
 }
 .cart-mini__h2 {
@@ -273,7 +272,7 @@
 .mini-star {
   position: absolute;
   top: -238px;
-  right: 878px;
+  left: 878px;
   z-index: 0;
 }
 
@@ -293,12 +292,14 @@
 
 .mini-sta3 {
   position: absolute;
-  right: 410px;
+  right: -2px;
+  top: -104px;
 }
 
 .mini-sta4 {
   position: absolute;
-  right: 410px;
+  right: -70px;
+  top: -64px;
 }
 
 .footer-line {
