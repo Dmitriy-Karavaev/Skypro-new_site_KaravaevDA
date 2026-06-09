@@ -80,63 +80,100 @@
    // let b = '3';
    // alert(Number(a) + Number(b));
 
-//    var month = prompt("Введите месяц");
+let number = 1;
 
-// switch (day) {
-//   case 'январь';
-//   case 'февраль';
-//   case 'декабрь':
-//      season = "зима";
-//       break;
-//    case 'март' 'март':
-//       console.log('второй день недели');
-//       break;
-//    // Продолжайте для остальных дней недели
-//    default:
-//       console.log('ввели что-то не то');
+while (number <= 12) {
+    if (number >= 1 && number <=2 || number === 12) {
+        console.log('Зима');
+    } else if (number >= 3 && number <= 5) {
+        console.log('Весна');
+    } else if (number >= 6 && number <= 8) {
+        console.log('Лето');
+    } else if (number >= 9 && number <= 11) {
+        console.log('Осень');
+    }
+
+	number++;
+}
+
+//     switch (monthNumber) {
+//         case '12':
+//         case '1':
+//         case '2':
+//         case 'декабрь':
+//         case 'январь':
+//         case 'февраль':
+//             season = "зима";
+//             break;
+//         case '3':
+//         case '4':
+//         case '5':
+//         case 'март':
+//         case 'апрель':
+//         case 'май':
+//             season = "весна";
+//             break;
+//         case '6':
+//         case '7':
+//         case '8':
+//         case 'июнь':
+//         case 'июль':
+//         case 'август':
+//             season = "лето";
+//             break;
+//         case '9':
+//         case '10':
+//         case '11':
+//         case 'сентябрь':
+//         case 'октябрь':
+//         case 'иноябрь':
+//             season = "осень";
+//             break;
+//     }
+    
+//     alert(`Месяц №${monthNumber} принадлежит к сезону "${season}".`);
 // }
 
-         let monthNumber = prompt('Введите месяц');
+let i = 1
 
-if (monthNumber > 12 || monthNumber < 1) {
-   alert ("Ошибка: номер месяца должен быть от 1 до 12.");
-} else {
-    let season;
-    
-    switch (monthNumber) {
-        case '12':
-        case '1':
-        case '2':
-        case 'декабрь':
-        case 'январь':
-        case 'февраль':
-            season = "зима";
-            break;
-        case '3':
-        case '4':
-        case '5':
-        case 'март':
-        case 'апрель':
-        case 'май':
-            season = "весна";
-            break;
-        case '6':
-        case '7':
-        case '8':
-        case 'июнь':
-        case 'июль':
-        case 'август':
-            season = "лето";
-            break;
-        case '9':
-        case '10':
-        case '11':
-        case 'сентябрь':
-        case 'октябрь':
-        case 'иноябрь':
-            season = "осень";
-            break;
+while (i <= 2) {
+    console.log ('Привет!');
+    i++
+}
+
+// let i = 1;
+
+// do {
+//    console.log (i);
+//    i++;
+// } while(i <= 5);
+
+// let i = 7;
+
+// do {
+//    console.log (i);
+//    i++;
+// } while(i <= 22);
+
+const obj = {
+ "Коля": '200',
+ "Вася": '300',
+ "Петя": '400'
+};
+
+for (let key in obj) {
+   console.log(`${key} — зарплата ${obj[key]} долларов.`);
+}
+
+let num = 0;
+for (let i=1000; i > 50; i = i / 2) {
+    num++;
+    console.log(i)
     }
-    
-    alert(`Месяц №${monthNumber} принадлежит к сезону "${season}".`);
+console.log(num);
+
+for (let n = 1; n <=7; n++) {
+for (let fryday = n; fryday < 31; fryday += 7) {
+  console.log(`Сегодня пятница ${fryday}-е число. Надо сдать еженедельный отчёт!`);
+}
 }
