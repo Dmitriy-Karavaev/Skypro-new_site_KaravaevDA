@@ -134,12 +134,12 @@ while (number <= 12) {
 //     alert(`Месяц №${monthNumber} принадлежит к сезону "${season}".`);
 // }
 
-let i = 1
+// let i = 1
 
-while (i <= 2) {
-    console.log ('Привет!');
-    i++
-}
+// while (i <= 2) {
+//     console.log ('Привет!');
+//     i++
+// }
 
 // let i = 1;
 
@@ -155,25 +155,120 @@ while (i <= 2) {
 //    i++;
 // } while(i <= 22);
 
-const obj = {
- "Коля": '200',
- "Вася": '300',
- "Петя": '400'
+// const obj = {
+//  "Коля": '200',
+//  "Вася": '300',
+//  "Петя": '400'
+// };
+
+// for (let key in obj) {
+//    console.log(`${key} — зарплата ${obj[key]} долларов.`);
+// }
+
+// let num = 0;
+// for (let i=1000; i > 50; i = i / 2) {
+//     num++;
+//     console.log(i)
+//     }
+// console.log(num);
+
+// for (let n = 1; n <=7; n++) {
+// for (let fryday = n; fryday < 31; fryday += 7) {
+//   console.log(`Сегодня пятница ${fryday}-е число. Надо сдать еженедельный отчёт!`);
+// }
+// }
+
+// Урок "Функции"
+
+//Задание 1
+
+function min(a, b) {
+    return a < b ? a : b;
+}
+
+
+//Задание 2
+
+const printSquare = number => console.log(number * number)
+
+//Задание 3
+
+const getSquare = (number) => {
+    return number * number;
+}
+
+//Задание 4
+
+function correctAge() {
+    const age = parseInt(prompt("Сколько вам лет?"));
+
+    if (isNaN(age)) {
+        return 'Вы ввели неправильное значение';
+    } else if (age < 0) {
+        return 'Вы ввели неправильное значение';
+    } else if (age >= 0 && age <= 12) {
+        return 'Привет, друг!';
+    } else {
+        return 'Добро пожаловать!';
+    }
+}
+
+alert(correctAge());
+
+//Задание 5
+
+function multiplyNumbers(a, b) {
+    
+    const num1 = Number(a);
+    const num2 = Number(b);
+
+    if (isNaN(num1) || isNaN(num2)) {
+        return 'Одно или оба значения не являются числом';
+    }
+
+    return num1 * num2;
+}
+
+//Задание 6
+
+function cubeNumber() {
+    const input = prompt("Введите число:");
+    
+    const number = Number(input);
+    
+    if (isNaN(number)) {
+        return 'Переданный параметр не является числом';
+    }
+    
+    const cube = number ** 3;
+    
+    return `${number} в кубе равняется ${cube}`;
+}
+
+//Задание 7
+
+const circle1 = {
+    radius: 5,
+
+    getArea: function() {
+        return Math.PI * this.radius ** 2;
+    },
+
+    getPerimeter: function() {
+        return 2 * Math.PI * this.radius;
+    }
 };
 
-for (let key in obj) {
-   console.log(`${key} — зарплата ${obj[key]} долларов.`);
-}
+const circle2 = {
+    radius: 10,
 
-let num = 0;
-for (let i=1000; i > 50; i = i / 2) {
-    num++;
-    console.log(i)
+    getArea: function() {
+        return Math.PI * this.radius ** 2;
+    },
+
+    getPerimeter: function() {
+        return 2 * Math.PI * this.radius;
     }
-console.log(num);
+}
 
-for (let n = 1; n <=7; n++) {
-for (let fryday = n; fryday < 31; fryday += 7) {
-  console.log(`Сегодня пятница ${fryday}-е число. Надо сдать еженедельный отчёт!`);
-}
-}
+
