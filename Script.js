@@ -189,7 +189,13 @@ function min(a, b) {
 
 //Задание 2
 
-const printSquare = number => console.log(number * number)
+public static String checkEvenOdd(int number) {
+    if (number % 2 == 0) {
+        return "Число четное";
+    } else {
+        return "Число нечетное";
+    }
+}
 
 //Задание 3
 
@@ -222,7 +228,7 @@ function multiplyNumbers(a, b) {
     const num1 = Number(a);
     const num2 = Number(b);
 
-    if (isNaN(num1) || isNaN(num2)) {
+    if (isNaN(a) || isNaN(b)) {
         return 'Одно или оба значения не являются числом';
     }
 
