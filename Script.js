@@ -189,8 +189,8 @@ function min(a, b) {
 
 //Задание 2
 
-public static String checkEvenOdd(int number) {
-    if (number % 2 == 0) {
+function checkEvenOdd(number) {
+    if (number % 2 === 0) {
         return "Число четное";
     } else {
         return "Число нечетное";
@@ -232,7 +232,7 @@ function multiplyNumbers(a, b) {
         return 'Одно или оба значения не являются числом';
     }
 
-    return num1 * num2;
+    return a * b;
 }
 
 //Задание 6
@@ -250,6 +250,8 @@ function cubeNumber() {
     
     return `${number} в кубе равняется ${cube}`;
 }
+
+console.log(cubeNumber());
 
 //Задание 7
 
