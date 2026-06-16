@@ -185,6 +185,8 @@
   justify-content: space-between;
 }
 .cart-mini__text {
+  display: flex;
+  flex-direction: column;
   width: 50%;
   margin: 48px 0 0 48px;
   max-width: 457px;
@@ -204,6 +206,7 @@
   margin-top: 24px;
 }
 .cart-mini__but {
+  text-decoration: none;
   width: 247px;
   height: 66px;
   border-radius: 60px;
@@ -214,6 +217,14 @@
   font-size: 24px;
   font-weight: 600;
   margin-top: 36px;
+  text-align: center;
+  padding: 16px 65px;
+  justify-content: center;
+  align-items: center;
+}
+.cart-mini__but:hover {
+  background-color: #ffffff;
+  color: black;
 }
 .cart-mini__img {
   width: 50%;
