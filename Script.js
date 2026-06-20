@@ -80,21 +80,21 @@
    // let b = '3';
    // alert(Number(a) + Number(b));
 
-let number = 1;
+// let number = 1;
 
-while (number <= 12) {
-    if (number >= 1 && number <=2 || number === 12) {
-        console.log('Зима');
-    } else if (number >= 3 && number <= 5) {
-        console.log('Весна');
-    } else if (number >= 6 && number <= 8) {
-        console.log('Лето');
-    } else if (number >= 9 && number <= 11) {
-        console.log('Осень');
-    }
+// while (number <= 12) {
+//     if (number >= 1 && number <=2 || number === 12) {
+//         console.log('Зима');
+//     } else if (number >= 3 && number <= 5) {
+//         console.log('Весна');
+//     } else if (number >= 6 && number <= 8) {
+//         console.log('Лето');
+//     } else if (number >= 9 && number <= 11) {
+//         console.log('Осень');
+//     }
 
-	number++;
-}
+// 	number++;
+// }
 
 //     switch (monthNumber) {
 //         case '12':
@@ -182,101 +182,101 @@ while (number <= 12) {
 
 //Задание 1
 
-function min(a, b) {
-    return a < b ? a : b;
-}
+// function min(a, b) {
+//     return a < b ? a : b;
+// }
 
 
-//Задание 2
+// //Задание 2
 
-function checkEvenOdd(number) {
-    if (number % 2 === 0) {
-        return "Число четное";
-    } else {
-        return "Число нечетное";
-    }
-}
+// function checkEvenOdd(number) {
+//     if (number % 2 === 0) {
+//         return "Число четное";
+//     } else {
+//         return "Число нечетное";
+//     }
+// }
 
-//Задание 3
+// //Задание 3
 
-const getSquare = (number) => {
-    return number * number;
-}
+// const getSquare = (number) => {
+//     return number * number;
+// }
 
-//Задание 4
+// //Задание 4
 
-function correctAge() {
-    const age = parseInt(prompt("Сколько вам лет?"));
+// function correctAge() {
+//     const age = parseInt(prompt("Сколько вам лет?"));
 
-    if (isNaN(age)) {
-        return 'Вы ввели неправильное значение';
-    } else if (age < 0) {
-        return 'Вы ввели неправильное значение';
-    } else if (age >= 0 && age <= 12) {
-        return 'Привет, друг!';
-    } else {
-        return 'Добро пожаловать!';
-    }
-}
+//     if (isNaN(age)) {
+//         return 'Вы ввели неправильное значение';
+//     } else if (age < 0) {
+//         return 'Вы ввели неправильное значение';
+//     } else if (age >= 0 && age <= 12) {
+//         return 'Привет, друг!';
+//     } else {
+//         return 'Добро пожаловать!';
+//     }
+// }
 
-alert(correctAge());
+// alert(correctAge());
 
-//Задание 5
+// //Задание 5
 
-function multiplyNumbers(a, b) {
+// function multiplyNumbers(a, b) {
     
-    const num1 = Number(a);
-    const num2 = Number(b);
+//     const num1 = Number(a);
+//     const num2 = Number(b);
 
-    if (isNaN(a) || isNaN(b)) {
-        return 'Одно или оба значения не являются числом';
-    }
+//     if (isNaN(a) || isNaN(b)) {
+//         return 'Одно или оба значения не являются числом';
+//     }
 
-    return a * b;
-}
+//     return a * b;
+// }
 
-//Задание 6
+// //Задание 6
 
-function cubeNumber() {
-    const input = prompt("Введите число:");
+// function cubeNumber() {
+//     const input = prompt("Введите число:");
     
-    const number = Number(input);
+//     const number = Number(input);
     
-    if (isNaN(number)) {
-        return 'Переданный параметр не является числом';
-    }
+//     if (isNaN(number)) {
+//         return 'Переданный параметр не является числом';
+//     }
     
-    const cube = number ** 3;
+//     const cube = number ** 3;
     
-    return `${number} в кубе равняется ${cube}`;
-}
+//     return `${number} в кубе равняется ${cube}`;
+// }
 
-console.log(cubeNumber());
+// console.log(cubeNumber());
 
-//Задание 7
+// //Задание 7
 
-const circle1 = {
-    radius: 5,
+// const circle1 = {
+//     radius: 5,
 
-    getArea: function() {
-        return Math.PI * this.radius ** 2;
-    },
+//     getArea: function() {
+//         return Math.PI * this.radius ** 2;
+//     },
 
-    getPerimeter: function() {
-        return 2 * Math.PI * this.radius;
-    }
-};
+//     getPerimeter: function() {
+//         return 2 * Math.PI * this.radius;
+//     }
+// };
 
-const circle2 = {
-    radius: 10,
+// const circle2 = {
+//     radius: 10,
 
-    getArea: function() {
-        return Math.PI * this.radius ** 2;
-    },
+//     getArea: function() {
+//         return Math.PI * this.radius ** 2;
+//     },
 
-    getPerimeter: function() {
-        return 2 * Math.PI * this.radius;
-    }
-}
+//     getPerimeter: function() {
+//         return 2 * Math.PI * this.radius;
+//     }
+// }
 
 
