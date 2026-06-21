@@ -21,3 +21,21 @@ const questions = [
         correctAnswer: 2
     }
 ];
+
+const btn = document.getElementById('viktorina');
+
+if (btn) {
+btn.addEventListener('click', () => {
+let correct = 0;
+
+questions.forEach(q => {
+const answer = prompt(`${q.question} \n ${q.options.join('\n')}`);
+
+if (answer === q.options[q.correctAnswer]) {
+correct++;
+}
+});
+
+alert('Правильных ответов: ' + correct);
+});
+}
