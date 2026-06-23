@@ -28,42 +28,42 @@ if (btn) {
     btn.addEventListener('click', () => {
         let correct = 0;
 
-        questions.forEach(q => {
+        // ✅ ИСПРАВЛЕНИЕ: Используем for...of вместо forEach
+        // Теперь return действительно остановит всю викторину
+        for (const q of questions) {
             let userAnswerNum;
             let isValidInput = false;
 
-            // Цикл для повторного запроса при некорректном вводе
+            // Цикл для повторного запроса, если пользователь ввёл ерунду
             while (!isValidInput) {
                 const answer = prompt(
-                    `${q.question}\n${q.options.map((opt, i) => `${i + 1}. ${opt}`).join('\n')}\n\nВведите номер ответа (1-4):`
+                    `${q.question}\n\n${q.options.map((opt, i) => `${i + 1}. ${opt}`).join('\n')}\n\nВведите номер ответа (1-${q.options.length}):`
                 );
 
-                // Проверка на отмену ввода (null)
+                // ПРОВЕРКА НА ОТМЕНУ
                 if (answer === null) {
                     alert('Вы прервали викторину!');
-                    return; // Прерываем выполнение викторины
+                    return; // ✅ ЭТО ТЕПЕРЬ РАБОТАЕТ: полностью выходит из функции-обработчика
                 }
 
-                // Преобразуем ввод в число
                 userAnswerNum = parseInt(answer, 10);
 
-                // Проверяем корректность ввода
                 if (isNaN(userAnswerNum)) {
                     alert('Пожалуйста, введите число!');
                 } else if (userAnswerNum < 1 || userAnswerNum > q.options.length) {
                     alert(`Пожалуйста, введите число от 1 до ${q.options.length}!`);
                 } else {
-                    isValidInput = true; // Ввод корректен, выходим из цикла
+                    isValidInput = true;
                 }
             }
 
-            // Приводим к 0‑based индексу и проверяем ответ
+            // Проверка ответа (приводим ввод пользователя к 0-based индексу)
             if (userAnswerNum - 1 === q.correctAnswer) {
                 correct++;
             }
-        });
+        }
 
-        alert('Правильных ответов: ' + correct);
+        alert(`Викторина завершена! Правильных ответов: ${correct} из ${questions.length}`);
     });
 }
 
@@ -176,7 +176,7 @@ function getNegativeNumbers(numbers) {
 
 const originalArray = [];
 for (let i = 0; i < 10; i++) {
-    const randomNum = Math.floor(Math.random());
+    const randomNum = Math.floor(Math.random() * 10);
     originalArray.push(randomNum);
 }
 
@@ -194,7 +194,7 @@ console.log('Массив с чётными значениями:', evenNumbers)
 
 const numbers = [];
 for (let i = 0; i < 6; i++) {
-    const randomNum = Math.floor(Math.random() + 1;
+    const randomNum = Math.floor(Math.random() * 10) + 1;
     numbers.push(randomNum);
 }
 
