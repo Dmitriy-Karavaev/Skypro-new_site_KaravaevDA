@@ -1,282 +1,120 @@
+// Задание 1
+// С помощью метода массива 
+// sort
+//  отсортируйте массив 
+// people
+//  по возрастанию возраста и выведите результат в консоль.
 
-// let a = 10;
-// alert(a);
-// a = 20;
-// alert(a);
+const people = [
+   { name: 'Глеб', age: 29 },
+   { name: 'Анна', age: 17 },
+   { name: 'Олег', age: 7 },
+   { name: 'Оксана', age: 47 }
+];
 
-// const date = "9 января 2007";
-// alert(date);
+// Сортируем по возрасту (age) по возрастанию
+people.sort((a, b) => a.age - b.age);
 
-// const personality = "Brendan Eich";
-// alert(personality);
+console.log(people);
+// Допишите колбэк для sort, изучите, как работает колбэк, в документации
+// console.log(people.sort(...));
+// код выше должен вывеcти =>
+// [
+//  { name: 'Олег', age: 7 },
+//  { name: 'Анна', age: 17 },
+//  { name: 'Глеб', age: 29 },
+//  { name: 'Оксана', age: 47 }
+// ]
 
-// let c =10;
-// let b = 2;
+//Задание 2
 
-// let sum = c + b;
-// alert(sum);
+// // Правило: число положительное
+function isPositive(num) {
+  return num > 0;
+}
+// Правило: человек мужского пола
+function isMale(person) {
+  return person.gender === 'male';
+}
+// Собственная реализация filter
+function filter(array, ruleFunction) {
+  const result = [];
 
-// let difference = c - b;
-// alert(difference);
-
-// let product = c * b;
-// alert(product);
-
-// let quotient = c / b;
-// alert(quotient);
-
-// let power = 2 ** 5;
-// alert(power);
-
-// let d = 9;
-// let remainder = d % b;
-// alert(remainder);
-
-// let num = 1;
-// num += 5;
-// num -= 3;
-// num *= 7;
-// num /= 3;
-// num++;
-// num--;
-// alert(num);
-
-// let age = prompt("Сколько вам лет?");
-// alert(age);
-
-// const user = {
-//    name: 'Дмитрий',
-//    age: '40',
-//    isAdmin: true
-// }
-
-// let yourName = prompt('Введите ваше имя:');
-// alert('Привет, ' + yourName + '!');
-
-   // let password = 'parol';
-   // let userInput = prompt('Введите пароль:');
-   // if (userInput === password) {
-   //  alert ('Пароль введен верно'); 
-   // } else {
-   //  alert ('Пароль введен неправильно');
-   // }
-
-   // let c = prompt('Введите число'); // задаём переменную с любым числом
-   // if (c > 0 && c < 10) {
-   //  alert ("Верно");
-   // } else {
-   //  alert ("Неверно");
-   // }
-
-   // let d = prompt('Введите число');
-   // let e = prompt('Введите число');
-   //    if (d > 100 || e > 100) {
-   // alert ("Верно");
-   // } else {
-   // alert ("Неверно");
-   // } 
-
-   // let a = '2';
-   // let b = '3';
-   // alert(Number(a) + Number(b));
-
-// let number = 1;
-
-// while (number <= 12) {
-//     if (number >= 1 && number <=2 || number === 12) {
-//         console.log('Зима');
-//     } else if (number >= 3 && number <= 5) {
-//         console.log('Весна');
-//     } else if (number >= 6 && number <= 8) {
-//         console.log('Лето');
-//     } else if (number >= 9 && number <= 11) {
-//         console.log('Осень');
-//     }
-
-// 	number++;
-// }
-
-//     switch (monthNumber) {
-//         case '12':
-//         case '1':
-//         case '2':
-//         case 'декабрь':
-//         case 'январь':
-//         case 'февраль':
-//             season = "зима";
-//             break;
-//         case '3':
-//         case '4':
-//         case '5':
-//         case 'март':
-//         case 'апрель':
-//         case 'май':
-//             season = "весна";
-//             break;
-//         case '6':
-//         case '7':
-//         case '8':
-//         case 'июнь':
-//         case 'июль':
-//         case 'август':
-//             season = "лето";
-//             break;
-//         case '9':
-//         case '10':
-//         case '11':
-//         case 'сентябрь':
-//         case 'октябрь':
-//         case 'иноябрь':
-//             season = "осень";
-//             break;
-//     }
+  for (let i = 0; i < array.length; i++) {
+    const currentElement = array[i];
     
-//     alert(`Месяц №${monthNumber} принадлежит к сезону "${season}".`);
-// }
+    // Вызываем правило для текущего элемента
+    const shouldKeep = ruleFunction(currentElement);
 
-// let i = 1
+    // Если правило вернуло true — добавляем элемент в результат
+    if (shouldKeep) {
+      result.push(currentElement);
+    }
+  }
 
-// while (i <= 2) {
-//     console.log ('Привет!');
-//     i++
-// }
+  return result;
+}
 
-// let i = 1;
+// Проверка 1: числа
+console.log(filter([3, -4, 1, 9], isPositive)); 
+// Ожидаемый результат: [3, 1, 9]
 
-// do {
-//    console.log (i);
-//    i++;
-// } while(i <= 5);
+// Проверка 2: люди
+const people2 = [
+  { name: 'Глеб', gender: 'male' },
+  { name: 'Анна', gender: 'female' },
+  { name: 'Олег', gender: 'male' },
+  { name: 'Оксана', gender: 'female' }
+];
 
-// let i = 7;
+console.log(filter(people2, isMale)); 
+// Ожидаемый результат: [{ name: 'Глеб', gender: 'male' }, { name: 'Олег', gender: 'male' }]
 
-// do {
-//    console.log (i);
-//    i++;
-// } while(i <= 22);
+//Задание 3
 
-// const obj = {
-//  "Коля": '200',
-//  "Вася": '300',
-//  "Петя": '400'
-// };
+const durationMs = 30000;      // 30 секунд в миллисекундах
+const intervalMs = 3000;       // каждые 3 секунды
 
-// for (let key in obj) {
-//    console.log(`${key} — зарплата ${obj[key]} долларов.`);
-// }
+let counter = 0;               // счётчик вызовов (для наглядности)
+const startTime = Date.now(); // фиксируем время старта
 
-// let num = 0;
-// for (let i=1000; i > 50; i = i / 2) {
-//     num++;
-//     console.log(i)
-//     }
-// console.log(num);
+// setInterval принимает колбэк: он будет запускаться каждые 3 секунды
+const intervalId = setInterval(() => {
+  counter++;
+  const now = new Date();
+  console.log(`[${counter}] Текущая дата и время: ${now.toLocaleString()}`);
+}, intervalMs);
 
-// for (let n = 1; n <=7; n++) {
-// for (let fryday = n; fryday < 31; fryday += 7) {
-//   console.log(`Сегодня пятница ${fryday}-е число. Надо сдать еженедельный отчёт!`);
-// }
-// }
+// setTimeout тоже принимает колбэк: сработает ровно через 30 секунд
+setTimeout(() => {
+  clearInterval(intervalId);   // останавливаем повторяющийся таймер
+  const endTime = Date.now();
+  const elapsed = Math.floor((endTime - startTime) / 1000);
+  console.log(`30 секунд прошло (прошло примерно ${elapsed} сек)`);
+}, durationMs);
 
-// Урок "Функции"
+//Задание 4
+function delayForSecond(callback) {
+    setTimeout(callback, 1000);
+}
 
-//Задание 1
+delayForSecond(function () {
+   console.log('Привет, Глеб!');
+});
 
-// function min(a, b) {
-//     return a < b ? a : b;
-// }
+//Задание 5
+// Функция delayForSecond через 1 секунду пишет в консоль 
+// «Прошла одна секунда», а затем вызывает переданный колбэк
+function delayForSecond(cb) {
+    setTimeout(() => {
+        console.log('Прошла одна секунда');
+        if(cb) {  cb(); }
+    }, 1000)
+}
 
+// Функция sayHi выводит в консоль приветствие для указанного имени
+function sayHi (name) {
+    console.log(`Привет, ${name}!`);
+}
 
-// //Задание 2
-
-// function checkEvenOdd(number) {
-//     if (number % 2 === 0) {
-//         return "Число четное";
-//     } else {
-//         return "Число нечетное";
-//     }
-// }
-
-// //Задание 3
-
-// const getSquare = (number) => {
-//     return number * number;
-// }
-
-// //Задание 4
-
-// function correctAge() {
-//     const age = parseInt(prompt("Сколько вам лет?"));
-
-//     if (isNaN(age)) {
-//         return 'Вы ввели неправильное значение';
-//     } else if (age < 0) {
-//         return 'Вы ввели неправильное значение';
-//     } else if (age >= 0 && age <= 12) {
-//         return 'Привет, друг!';
-//     } else {
-//         return 'Добро пожаловать!';
-//     }
-// }
-
-// alert(correctAge());
-
-// //Задание 5
-
-// function multiplyNumbers(a, b) {
-    
-//     const num1 = Number(a);
-//     const num2 = Number(b);
-
-//     if (isNaN(a) || isNaN(b)) {
-//         return 'Одно или оба значения не являются числом';
-//     }
-
-//     return a * b;
-// }
-
-// //Задание 6
-
-// function cubeNumber() {
-//     const input = prompt("Введите число:");
-    
-//     const number = Number(input);
-    
-//     if (isNaN(number)) {
-//         return 'Переданный параметр не является числом';
-//     }
-    
-//     const cube = number ** 3;
-    
-//     return `${number} в кубе равняется ${cube}`;
-// }
-
-// console.log(cubeNumber());
-
-// //Задание 7
-
-// const circle1 = {
-//     radius: 5,
-
-//     getArea: function() {
-//         return Math.PI * this.radius ** 2;
-//     },
-
-//     getPerimeter: function() {
-//         return 2 * Math.PI * this.radius;
-//     }
-// };
-
-// const circle2 = {
-//     radius: 10,
-
-//     getArea: function() {
-//         return Math.PI * this.radius ** 2;
-//     },
-
-//     getPerimeter: function() {
-//         return 2 * Math.PI * this.radius;
-//     }
-// }
-
-
+delayForSecond(() => sayHi('Глеб'));
