@@ -1,120 +1,20 @@
-// Задание 1
-// С помощью метода массива 
-// sort
-//  отсортируйте массив 
-// people
-//  по возрастанию возраста и выведите результат в консоль.
 
-const people = [
-   { name: 'Глеб', age: 29 },
-   { name: 'Анна', age: 17 },
-   { name: 'Олег', age: 7 },
-   { name: 'Оксана', age: 47 }
-];
+document.addEventListener('DOMContentLoaded', () => {
+    const line = document.getElementById('scrollingLine');
+    const clone = document.getElementById('scrollingLineClone');
 
-// Сортируем по возрасту (age) по возрастанию
-people.sort((a, b) => a.age - b.age);
+    if (!line || !clone) return;
 
-console.log(people);
-// Допишите колбэк для sort, изучите, как работает колбэк, в документации
-// console.log(people.sort(...));
-// код выше должен вывеcти =>
-// [
-//  { name: 'Олег', age: 7 },
-//  { name: 'Анна', age: 17 },
-//  { name: 'Глеб', age: 29 },
-//  { name: 'Оксана', age: 47 }
-// ]
+    // Клонируем содержимое первой строки во вторую
+    clone.innerHTML = line.innerHTML;
 
-//Задание 2
+    const resetAnimation = () => {
+        // Сбрас анимации, чтобы не было рывка
+        line.style.animation = 'none';
+        void line.offsetHeight; // принудительный пересчёт макета
+        line.style.animation = null;
+    };
 
-// // Правило: число положительное
-function isPositive(num) {
-  return num > 0;
-}
-// Правило: человек мужского пола
-function isMale(person) {
-  return person.gender === 'male';
-}
-// Собственная реализация filter
-function filter(array, ruleFunction) {
-  const result = [];
-
-  for (let i = 0; i < array.length; i++) {
-    const currentElement = array[i];
-    
-    // Вызываем правило для текущего элемента
-    const shouldKeep = ruleFunction(currentElement);
-
-    // Если правило вернуло true — добавляем элемент в результат
-    if (shouldKeep) {
-      result.push(currentElement);
-    }
-  }
-
-  return result;
-}
-
-// Проверка 1: числа
-console.log(filter([3, -4, 1, 9], isPositive)); 
-// Ожидаемый результат: [3, 1, 9]
-
-// Проверка 2: люди
-const people2 = [
-  { name: 'Глеб', gender: 'male' },
-  { name: 'Анна', gender: 'female' },
-  { name: 'Олег', gender: 'male' },
-  { name: 'Оксана', gender: 'female' }
-];
-
-console.log(filter(people2, isMale)); 
-// Ожидаемый результат: [{ name: 'Глеб', gender: 'male' }, { name: 'Олег', gender: 'male' }]
-
-//Задание 3
-
-const durationMs = 30000;      // 30 секунд в миллисекундах
-const intervalMs = 3000;       // каждые 3 секунды
-
-let counter = 0;               // счётчик вызовов (для наглядности)
-const startTime = Date.now(); // фиксируем время старта
-
-// setInterval принимает колбэк: он будет запускаться каждые 3 секунды
-const intervalId = setInterval(() => {
-  counter++;
-  const now = new Date();
-  console.log(`[${counter}] Текущая дата и время: ${now.toLocaleString()}`);
-}, intervalMs);
-
-// setTimeout тоже принимает колбэк: сработает ровно через 30 секунд
-setTimeout(() => {
-  clearInterval(intervalId);   // останавливаем повторяющийся таймер
-  const endTime = Date.now();
-  const elapsed = Math.floor((endTime - startTime) / 1000);
-  console.log(`30 секунд прошло (прошло примерно ${elapsed} сек)`);
-}, durationMs);
-
-//Задание 4
-function delayForSecond(callback) {
-    setTimeout(callback, 1000);
-}
-
-delayForSecond(function () {
-   console.log('Привет, Глеб!');
+    line.addEventListener('animationiteration', resetAnimation);
 });
 
-//Задание 5
-// Функция delayForSecond через 1 секунду пишет в консоль 
-// «Прошла одна секунда», а затем вызывает переданный колбэк
-function delayForSecond(cb) {
-    setTimeout(() => {
-        console.log('Прошла одна секунда');
-        if(cb) {  cb(); }
-    }, 1000)
-}
-
-// Функция sayHi выводит в консоль приветствие для указанного имени
-function sayHi (name) {
-    console.log(`Привет, ${name}!`);
-}
-
-delayForSecond(() => sayHi('Глеб'));

@@ -68,17 +68,24 @@
 
 .scrolling {
     z-index: 1;
-    overflow-x: scroll;
+    overflow-x: hidden;
+    width: 100%;
+    padding: 0;
+    background-color: #BCEC30;
 
-    &-line {
-        position: relative;
+    &-line,
+    &-line-clone {
         display: flex;
-        gap: 51px;
-        list-style-type: none;
-        height: 90px;
         align-items: center;
-        background-color: #BCEC30;
-        width: max-content;
+        height: 90px;
+        gap: 51px;
+        white-space: nowrap;
+    }
+
+    &-line-clone {
+        position: absolute;
+        top: 0;
+        left: 100%;
     }
 
     &__klick {
@@ -90,8 +97,37 @@
             font-family: Montserrat;
             font-weight: 700;
             font-size: 30px;
-            line-height: 110.00000000000001%;
+            line-height: 110%;
+            display: block;
+            transition: transform 0.3s ease, color 0.3s ease;
+
+            &:hover {
+                color: #ff4757;
+                transform: scale(1.05);
+                text-shadow: 0 0 8px rgba(255, 71, 87, 0.5);
+            }
         }
+    }
+
+    &__separator {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Анимация прокрутки влево */
+    @keyframes scrollLeft {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+
+    .scrolling-line {
+        animation: scrollLeft 25s linear infinite;
     }
 }
 
@@ -117,7 +153,7 @@
         font-family: montserrat;
         margin-top: 24px;
         color: #FFFFFF;
-        max-width: 788px;   
+        max-width: 788px;
     }
 
     &-topgames {
@@ -128,9 +164,9 @@
         margin-top: 72px;
         max-width: 1201px;
 
-        &__a {        
-        text-decoration: none;
-        color: black;
+        &__a {
+            text-decoration: none;
+            color: black;
         }
 
         &__block {
@@ -140,28 +176,29 @@
             z-index: 1;
         }
     }
-    
-    &-minigames {        
+
+    &-minigames {
         position: relative;
-        
+
         &__block {
-        display: flex;        
-        flex-direction: column;
-        gap: 32px;
-        margin-top: 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            margin-top: 32px;
         }
     }
 }
 
 .cart {
     background-color: #ffffff;
-    border-radius: 30px;    
+    border-radius: 30px;
+    overflow: hidden; 
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease;
 
-    &:hover {   
-        height: 551px;
-        transition: height 0.3s; 
+    &:hover {
+        transform: scale(1.05); 
     }
-    
+
     &-small {
         height: 512px;
     }
@@ -174,6 +211,7 @@
         width: 100%;
         border-radius: 30px;
         height: 314px;
+        object-fit: cover; 
     }
 
     &__text {
@@ -205,7 +243,7 @@
         &:nth-child(2n+1) {
             justify-content: space-between;
         }
-        
+
         &__text {
             display: flex;
             flex-direction: column;
@@ -257,9 +295,10 @@
             width: 50%;
             border-radius: 30px;
             height: 500px;
+            object-fit: cover;
         }
     }
-    
+
 }
 
 
@@ -325,9 +364,13 @@
 
 .mini-star {
     position: absolute;
-    top: -238px;
-    left: 878px;
+    top: -18%;
+    right: -8%;
     z-index: 0;
+    width: 30%;
+    height: auto;
+    max-width: 400px;
+    pointer-events: none;
 }
 
 .mini-star1 {
