@@ -67,25 +67,25 @@
 }
 
 .scrolling {
+    display: flex;
+    align-items: center;
     z-index: 1;
     overflow-x: hidden;
+    white-space: nowrap;
     width: 100%;
     padding: 0;
     background-color: #BCEC30;
+    height: 90px;
 
-    &-line,
-    &-line-clone {
-        display: flex;
-        align-items: center;
-        height: 90px;
+    &-line {
+        display: inline-flex;
+        min-width: 200%;
         gap: 51px;
-        white-space: nowrap;
+        animation: scroll-left 15s linear infinite;
     }
 
-    &-line-clone {
-        position: absolute;
-        top: 0;
-        left: 100%;
+    &-line:hover {
+        animation-play-state: paused;
     }
 
     &__klick {
@@ -115,19 +115,15 @@
         justify-content: center;
     }
 
-    /* Анимация прокрутки влево */
-    @keyframes scrollLeft {
+    @keyframes scroll-left {
         0% {
             transform: translateX(0);
         }
 
         100% {
-            transform: translateX(-100%);
+            // Сдвигаем ровно на 50%, так как контент продублирован (min-width: 200%)
+            transform: translateX(-50%);
         }
-    }
-
-    .scrolling-line {
-        animation: scrollLeft 25s linear infinite;
     }
 }
 
@@ -192,11 +188,11 @@
 .cart {
     background-color: #ffffff;
     border-radius: 30px;
-    overflow: hidden; 
+    overflow: hidden;
     transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease;
 
     &:hover {
-        transform: scale(1.05); 
+        transform: scale(1.05);
     }
 
     &-small {
@@ -211,7 +207,7 @@
         width: 100%;
         border-radius: 30px;
         height: 314px;
-        object-fit: cover; 
+        object-fit: cover;
     }
 
     &__text {
@@ -419,3 +415,5 @@
 }
 
 @import 'mob';
+
+ 
