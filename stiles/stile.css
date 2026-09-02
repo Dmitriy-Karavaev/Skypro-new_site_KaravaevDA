@@ -486,6 +486,7 @@
   }
   .menu-minigames {
     display: flex;
+    flex-direction: column;
     position: relative;
   }
   .menu-minigames__block {
