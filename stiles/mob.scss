@@ -99,8 +99,10 @@
         }
 
         &-minigames {
+            display: flex;
+            flex-direction: column;
             position: relative;
-    
+
             &__block {
                 flex-direction: column;
                 align-content: center;
@@ -115,6 +117,7 @@
             width: 100%;
             flex: 1 100%;
             border-radius: 30px;
+            max-height: none;
 
             &:nth-child(2n+1) {
                 border-radius: 30px;
@@ -126,34 +129,45 @@
 
             &__img {
                 width: 100%;
-                height: 180px;
+                height: 100%;
+
+                &:nth-child(2n) {
+                    border-radius: 0 0 30px 30px;
+                }
+
+                &:nth-child(2n+1) {
+                    border-radius: 30px 30px 0 0;
+                }
             }
 
             &__but {
                 margin-top: 0;
                 margin-bottom: 32.67px;
             }
-        }
 
-        &__text {
-            display: flex;
-            flex-direction: column;
-            padding: 29.04px 0;
-            width: 285px;
-        }
+            &__text {
+                display: flex;
+                flex-direction: column;
+                padding: 29.04px 0;
+                width: 285px;
+                max-height: 100%;
+            }
 
-        &__par {
-            width: 285px;
-            margin-top: 16px;
-            text-align: left;
-        }
+            &__par {
+                width: 285px;
+                padding-bottom: 16px;
+                text-align: left;
+            }
 
-        &__h2 {
-            margin-top: 0;
-        }
+            &__h2 {
+                margin-top: 0;
+            }
 
-        &__img {
-            height: 284.9259338378906px;
+            &__img {
+                width: 100%;
+                height: 100%;
+                border-radius: 0;
+            }
         }
     }
 
@@ -207,9 +221,9 @@
         display: none;
     }
 
-  .decor-stars {
-    display: none;        
-  }
+    .decor-stars {
+        display: none;
+    }
 
     .scrolling {
         &-line {
