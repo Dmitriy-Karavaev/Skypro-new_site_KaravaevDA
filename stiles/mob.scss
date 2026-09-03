@@ -162,6 +162,7 @@
 
             &__h2 {
                 margin-top: 0;
+                font-size: 32px;
             }
 
             &__img {
@@ -212,6 +213,10 @@
         position: absolute;
         top: 557px;
         right: 86px;
+    }
+
+    .mini-star {
+        display: none;
     }
 
     .mini-star3 {
