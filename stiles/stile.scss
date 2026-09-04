@@ -236,7 +236,8 @@
         font-family: Montserrat;
         background-color: #F7F7F7;
         border-radius: 52.58px;
-        text-align: center;
+        text-align: center;        
+        justify-content: center;
     }
 
     &__h2 {
@@ -373,7 +374,7 @@
 .mini-star {
     position: absolute;
     top: -18%;
-    right: -8%;
+    right: -30px;
     z-index: 0;
     width: 30%;
     height: auto;
@@ -404,7 +405,7 @@
 
 .mini-star4 {
     position: absolute;
-    right: -65px;
+    right: -30px;
     top: 124px;
 }
 
