@@ -95,7 +95,7 @@
   .cart-mini {
     flex-direction: column;
     max-width: none;
-    width: 75%;
+    width: 100%;
     flex: 1;
     border-radius: 30px;
     max-height: none;
@@ -121,16 +121,16 @@
     margin-bottom: 32.67px;
   }
   .cart-mini__text {
-    display: flex;
     flex-direction: column;
     padding: 20px 0;
-    width: 285px;
-    max-height: 100%;
+    width: 100%;
+    align-items: center;
   }
   .cart-mini__par {
     width: 285px;
     padding-bottom: 16px;
     text-align: left;
+    font-size: 16px;
   }
   .cart-mini__h2 {
     margin-top: 0;

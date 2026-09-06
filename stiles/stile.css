@@ -3,23 +3,30 @@
   padding: 0;
 }
 
-.center {
-  padding-left: calc(50% - 600px);
-  padding-right: calc(50% - 600px);
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  font-family: sans-serif;
 }
 
-.last {
-  padding-bottom: 144px;
+.center {
+  position: relative;
+  width: 100%;
+  max-width: 1201px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .header {
-  position: relative;
   background-color: #E1FF8F;
-  padding-top: 200px;
   min-height: 500px;
 }
 .header-text {
   position: relative;
+  padding-top: 200px;
+  padding-bottom: 156px;
   max-width: 769px;
   z-index: 10;
 }
@@ -63,6 +70,7 @@
 .scrolling {
   display: flex;
   align-items: center;
+  position: relative;
   z-index: 1;
   overflow-x: hidden;
   white-space: nowrap;
@@ -118,18 +126,16 @@
 
 .menu {
   background-color: black;
-  padding: 0 32px;
 }
 .menu-text {
   max-width: 788px;
   padding-top: 90px;
 }
-.menu__heading1 {
+.menu__heading2 {
   font-size: 63px;
   font-weight: 700;
   font-family: montserrat;
   color: #FFFFFF;
-  width: 320px;
   padding-top: 50px;
 }
 .menu__par {
@@ -142,7 +148,7 @@
 .menu-topgames {
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 32px;
   padding-top: 95px;
@@ -150,6 +156,7 @@
 .menu-topgames__a {
   text-decoration: none;
   color: black;
+  max-width: 378px;
 }
 .menu-topgames__block {
   display: flex;
@@ -165,16 +172,16 @@
   display: flex;
   flex-wrap: wrap;
   gap: 32px;
-  margin-top: 32px;
+  margin-top: 75px;
 }
 
 .cart {
   background-color: #ffffff;
   border-radius: 30px;
   transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease;
-  align-items: stretch;
+  width: 100%;
   box-sizing: border-box;
-  flex: 1 1 100%;
+  flex: 1 1 auto;
 }
 .cart:hover {
   transform: scale(1.05);
@@ -223,7 +230,6 @@
   background-color: #ffffff;
   border-radius: 30px;
   align-items: center;
-  max-height: 448px;
   width: 100%;
   overflow: hidden;
 }
@@ -274,7 +280,6 @@
 .cart-mini__img {
   border-radius: 30px;
   width: 50%;
-  height: 100%;
 }
 
 .img-1 {
@@ -492,7 +497,7 @@
   .cart-mini {
     flex-direction: column;
     max-width: none;
-    width: 75%;
+    width: 100%;
     flex: 1;
     border-radius: 30px;
     max-height: none;
@@ -518,16 +523,16 @@
     margin-bottom: 32.67px;
   }
   .cart-mini__text {
-    display: flex;
     flex-direction: column;
     padding: 20px 0;
-    width: 285px;
-    max-height: 100%;
+    width: 100%;
+    align-items: center;
   }
   .cart-mini__par {
     width: 285px;
     padding-bottom: 16px;
     text-align: left;
+    font-size: 16px;
   }
   .cart-mini__h2 {
     margin-top: 0;
