@@ -259,6 +259,7 @@ body {
         align-items: center;
         width: 100%;
         overflow: hidden;
+        max-height: 500px;
 
         &__text {
             display: flex;
@@ -312,6 +313,8 @@ body {
         &__img {
             border-radius: 30px;
             width: 50%;
+            flex-grow: 1;
+            height: 100%;
         }
     }
 }
@@ -410,7 +413,7 @@ body {
 
 .mini-star4 {
     position: absolute;
-    right: -30px;
+    right: 0;
     top: 124px;
 }
 

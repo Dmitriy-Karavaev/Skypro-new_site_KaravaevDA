@@ -232,6 +232,7 @@ body {
   align-items: center;
   width: 100%;
   overflow: hidden;
+  max-height: 500px;
 }
 .cart-mini__text {
   display: flex;
@@ -280,6 +281,8 @@ body {
 .cart-mini__img {
   border-radius: 30px;
   width: 50%;
+  flex-grow: 1;
+  height: 100%;
 }
 
 .img-1 {
@@ -373,7 +376,7 @@ body {
 
 .mini-star4 {
   position: absolute;
-  right: -30px;
+  right: 0;
   top: 124px;
 }
 
